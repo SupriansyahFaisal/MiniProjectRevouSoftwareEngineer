@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Katik</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js">
+    </script>
+</head>
+<body>
+ <h1 class="tittle">Welcome to Katik </h1>
+ <p class="tittle">Hai sobat, Selamat Datang dikatik :) <br> Sebuah web apps sederhana yang berfungsi untuk menghitung keliling dan luas bangun datar</p>
+ <div class="center"> 
+    <div class="btn-group" style="width:50%">
+        <button onclick="Segitiga()"style="width:50%;background-color: #ffcf77;"> Segitiga</a></button>
+        <button onclick="JajarGenjang()"style="width:50%;background-color:#8fa7df">Jajar Genjang</button>
+    </div>
+ </div>
+ 
+    <table class="tg" style="background-color: #ffcf77">
+        <tbody>
+          <tr>
+            <td class="tg-jfoo" colspan="2">
+                <div id="segitiga">Segitiga</div>
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-jfoo" colspan="2"><img src="assets\Segitiga.png" width="200" height="200"></td>
+          </tr>
+          <tr>
+            <td class="tg-jfoo">Keliling</td>
+            <td class="tg-jfoo">Luas</td>
+          </tr>
+          <tr>
+            <td class="tg-c3ow">Rumus Keliling yaitu :</td>
+            <td class="tg-c3ow">Rumus Luas yaitu :</td>
+          </tr>
+          <tr>
+            <td class="tg-c3ow">Keliling = A+B+C</td>
+            <td class="tg-c3ow">Luas = 1/2 x Alas x Tinggi</td>
+          </tr>
+          <tr>
+            <td class="tg-c3ow">Keterangan :<br>sisi 1 = A<br>sisi 2 = B<br>sisi 3 = C</td>
+            <td class="tg-c3ow">Keterangan :<br>Alas = A'<br>Tinggi = T</td>
+          </tr>
+          <tr>
+            <td class="tg-c3ow">Hitung Keliling </td>
+            <td class="tg-c3ow">Hitung Luas</td>
+          </tr>
+          <tr>
+            <td class="tg-c3ow">      
+                <label for="sisiA">A:</label>
+                <input type="number" id="SegA" name="sisiA"><br><br>
+                <label for="sisiB">B:</label>
+                <input type="number" id="SegB" name="sisiB"><br><br>
+                <label for="SisiC">C:</label>
+                <input type="number" id="SegC" name="sisiC"><br><br>
+            </td>
+            <td class="tg-c3ow">      
+                <label for="alas">Alas:</label>
+                <input type="number" id="alasSeg" name="alas"><br><br>
+                <label for="tinggi">Tinggi:</label>
+                <input type="number" id="tinggiSeg" name="tinggi"><br><br>
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-c3ow"><input type="button" value="Hitung" onclick="hitungKelilingSegitiga()"></td>
+            <td class="tg-c3ow"><input type="button" value="Hitung" onclick="hitungLuasSegitiga()"></td>
+          </tr>
+          <tr>
+            <td class="tg-c3ow" style="height: 4cm;">
+                <textarea style="height: 100%; width: 80%;"  type="text" id="hasilkelilingseg" name="luasSeg" readonly> </textarea>
+            </td>
+            <td class="tg-c3ow" style="height: 4cm;">
+                <textarea style="height: 100%; width: 80%;"  type="text" id="hasilluasseg" name="luasSeg" readonly> </textarea>
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-c3ow"></td>
+            <td class="tg-c3ow"></td>
+          </tr>
+        </tbody>
+        </table>
+
+        <table class="tg" style="background-color: #8fa7df">
+            <tbody>
+              <tr>
+                <td class="tg-jfoo" colspan="2">
+                    <div id="JajarGenjang">Jajar Genjang</div>
+                </td>
+              </tr>
+              <tr>
+                <td class="tg-jfoo" colspan="2"><img src="assets\jajargenjang.png" width="200" height="200"></td>
+              </tr>
+              <tr>
+                <td class="tg-jfoo">Keliling</td>
+                <td class="tg-jfoo">Luas</td>
+              </tr>
+              <tr>
+                <td class="tg-c3ow">Rumus Keliling yaitu :</td>
+                <td class="tg-c3ow">Rumus Luas yaitu :</td>
+              </tr>
+              <tr>
+                <td class="tg-c3ow">Keliling = A+B+C+D</td>
+                <td class="tg-c3ow">Luas = Alas x Tinggi</td>
+              </tr>
+              <tr>
+                <td class="tg-c3ow">Keterangan :<br>sisi 1 = A<br>sisi 2 = B<br>sisi 3 = C<br>sisi 4 = D</td>
+                <td class="tg-c3ow">Keterangan :<br>Alas = A'<br>Tinggi = T</td>
+              </tr>
+              <tr>
+                <td class="tg-c3ow">Hitung Keliling </td>
+                <td class="tg-c3ow">Hitung Luas</td>
+              </tr>
+              <tr>
+                <td class="tg-c3ow">
+                    <label for="sisiA">A:</label>
+                    <input type="number" id="jajarA" name="sisiA"><br><br>
+                    <label for="sisiB">B:</label>
+                    <input type="number" id="jajarB" name="sisiB"><br><br>
+                    <label for="SisiC">C:</label>
+                    <input type="number" id="jajarC" name="sisiC"><br><br>
+                    <label for="sisiA">A:</label>
+                    <input type="number" id="jajarD" name="sisiD"><br><br>
+                </td>
+                <td class="tg-c3ow">                
+                    <label for="sisiA">Alas :</label>
+                    <input type="number" id="AlasG" name="alas"><br><br>
+                    <label for="sisiB">Tinggi :</label>
+                    <input type="number" id="TinggiG" name="alas"><br><br>
+              <tr>
+                <td class="tg-c3ow"><input type="button" value="Hitung" onclick="hitungKelilingJajarGenjang()"></td>
+                <td class="tg-c3ow"><input type="button" value="Hitung" onclick="hitungLuasJajargenjang()"></td>
+              </tr>
+              <tr>
+                <td class="tg-c3ow" style="height: 4cm;">
+                    <textarea style="height: 100%; width: 80%;"  type="text" id="hasilkelilingjar" name="luasSeg" readonly> </textarea>
+                </td>
+                <td class="tg-c3ow" style="height: 4cm;">
+                    <textarea style="height: 100%; width: 80%;"  type="text" id="hasilluasjar"name="luasSeg" readonly> </textarea>
+                </td>
+              </tr>
+              <tr>
+                <td class="tg-c3ow"></td>
+                <td class="tg-c3ow"></td>
+              </tr>
+            </tbody>
+            </table>
+
+
+</body>
+</html>
